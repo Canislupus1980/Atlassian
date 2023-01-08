@@ -29,7 +29,7 @@ services:
       ATL_TOMCAT_SCHEME: 'https'
       ATL_TOMCAT_SECURE: 'true'
       ATL_PROXY_PORT: '443'
-      ATL_PROXY_NAME: 'fisheye.becloud.by'
+      ATL_PROXY_NAME: 'fisheye.domen.com'
     volumes:
       - fisheye-vol:/atlassian/data/fisheye
       - ./agent/atlassian-agent.bak:/atlassian-agent.jar:ro
