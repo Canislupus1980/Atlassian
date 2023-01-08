@@ -46,7 +46,7 @@ services:
     container_name: postgressql-fisheye
     hostname: postgressql-fisheye
     environment:
-    POSTGRES_USER: fisheye
+      POSTGRES_USER: fisheye
       POSTGRES_PASSWORD: 'PZz-0oOmnW#fgT:kc^7c'
       POSTGRES_DB: fisheye
     volumes:
