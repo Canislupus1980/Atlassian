@@ -1,0 +1,53 @@
+version: '3'
+
+services:
+  crowd:
+    image: atlassian/crowd:latest
+    container_name: crowd
+    networks:
+      - crowdnet
+    volumes:
+      - ./crowddata:/var/atlassian/crowd
+      - ./agent/atlassian-agent.bak:/atlassian-agent.jar:ro
+    ports:
+      - '8095:8095'
+    environment:
+      ATL_DB_DRIVER: 'org.postgresql.Driver'
+      ATL_DB_TYPE: 'postgres72'
+      ATL_JDBC_URL: 'jdbc:postgresql://db-crowd:5432/crowd'
+      ATL_JDBC_USER: 'crowd'
+      ATL_JDBC_PASSWORD: 'DA.13jpj93%eBw_Q'
+      #   If Use Reverse Proxy Uncomment this Line
+      ATL_TOMCAT_SCHEME: 'https'
+      ATL_TOMCAT_SECURE: 'true'
+      ATL_PROXY_PORT: '443'
+      ATL_PROXY_NAME: 'crowd.domen.com'
+      JAVA_OPTS: '-javaagent:/atlassian-agent.jar'
+      JVM_MINIMUM_MEMORY: 1024m
+      JVM_MAXIMUM_MEMORY: 2048m
+      JVM_RESERVED_CODE_CACHE_SIZE: 512m
+
+  postgressql-crowd:
+    image: postgres
+    restart: always
+    container_name: postgressql-crowd
+    hostname: postgressql-crowd
+    environment:
+      POSTGRES_USER: crowd
+      POSTGRES_PASSWORD: 'DA.13jpj93%eBw_Q'
+    volumes:
+      - ./postgresql-data-crowd:/var/lib/postgresql/data
+    networks:
+      crowdnet:
+       aliases:
+        - db-crowd
+
+volumes:
+  crowddata:
+    external: false
+  postgresqldata:
+    external: false
+
+networks:
+  crowdnet:
+    driver: bridge
