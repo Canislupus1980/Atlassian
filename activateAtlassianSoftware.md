@@ -57,3 +57,4 @@ https://github.com/hgqapp/atlassian-agent
 
 https://gitee.com/gfly/atlassian-agent
 
+https://github.com/beigi-reza/atlassian-software
