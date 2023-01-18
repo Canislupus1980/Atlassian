@@ -40,10 +40,10 @@ docker-compose -f bamboo-compose.yml up -d
 
 ### Fisheye & Crucible
 
-run [fisheys-compose.yml](/fisheys-compose.yml)
+run [fisheyse-compose.yml](/fisheyse-compose.yml)
 
 ```bash
-docker-compose -f fisheys-compose.yml up -d
+docker-compose -f fisheyse-compose.yml up -d
 ```
 > Use `http://<ip>:8088`
 
