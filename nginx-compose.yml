@@ -8,7 +8,7 @@
 #         /____/                                                         /_/                    /____/
 #   Docker Compose for Run Nginx
 #   Need  "my-net" Network for Run this File
-#   docker network create --driver bridge --subnet=150.50.50.0/24 my-net
+#   docker network create --driver bridge --subnet=172.16.50.0/24 my-net
 
 version: "3.4"
 services:
