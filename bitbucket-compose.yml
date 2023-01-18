@@ -20,11 +20,11 @@ services:
       #JDBC_OPTS: '-javaagent:/atlassian-agent.jar'
       #JDBC_DRIVER: org.postgresql.Driver
       #JDBC_USER: bitbucket
-      #JDBC_PASSWORD: 'ueeHWugC!@80'
+      #JDBC_PASSWORD: ''
       SERVER_SCHEME: 'https'
       SERVER_SECURE: 'true'
       SERVER_PROXY_PORT: '443'
-      SERVER_PROXY_NAME: 'bitbucket.becloud.by'
+      SERVER_PROXY_NAME: 'bitbucket.domen.com'
       JVM_MINIMUM_MEMORY: 512m
       JVM_MAXIMUM_MEMORY: 2048m
       JVM_RESERVED_CODE_CACHE_SIZE: 512m
