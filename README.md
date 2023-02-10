@@ -49,6 +49,7 @@ docker-compose -f fisheye-compose.yml up -d
 
 ![image](https://user-images.githubusercontent.com/86954730/218108506-f5911ba4-b59a-4de4-aee4-d2d6a05fe8df.png)
 
+and restart: docker restart fisheye
 
 ### Jira Server Manegment (Service Desk)
 
