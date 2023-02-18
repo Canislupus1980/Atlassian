@@ -4,6 +4,7 @@ This project run & Activate (crack) Attlasian software as docker container, All 
 The database is deployed on a separate server, without docker
 
 nano /etc/postgresql/13/main/pg_hba.conf
+
 ![image](https://user-images.githubusercontent.com/86954730/219866097-90ac6871-104c-494e-9ac5-e338083c7daf.png)
 
 sudo -i -u postgres
