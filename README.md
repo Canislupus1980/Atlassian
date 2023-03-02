@@ -1,3 +1,4 @@
+![Atlassian](https://www.appnovation.com/sites/default/files/2020-11/Atlassian%202-V2_0.png)
 # Atlassian Software Docker Compose + Activate
 This project run & Activate (crack) Attlasian software as docker container, All programs can be run behind a reverse proxy
 
