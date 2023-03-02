@@ -1,18 +1,17 @@
 ![Atlassian](https://www.appnovation.com/sites/default/files/2020-11/Atlassian%202-V2_0.png)
 # Atlassian Software Docker Compose + Activate
-This project run & Activate (crack) Attlasian software as docker container, All programs can be run behind a reverse proxy
-
-The database is deployed on a separate server, without docker
-
+***This project run & Activate (crack) Attlasian software as docker container, All programs can be run behind a reverse proxy***
+***The database is deployed on a separate server, without docker***
+```bash
 nano /etc/postgresql/13/main/pg_hba.conf
-
+```
 ![image](https://user-images.githubusercontent.com/86954730/219866097-90ac6871-104c-494e-9ac5-e338083c7daf.png)
-
+```bash
 sudo -i -u postgres
 psql  --> CREATE USER jira WITH password '*'; --> CREATE DATABASE jiradb; --> GRANT ALL ON DATABASE jiradb TO jira; 
 ...
 --> \q --> exit --> systemctl restart postgresql
-
+```
 ## Run Application
 ### Jira
 run [jira-compose.yml](/jira-compose.yml)
